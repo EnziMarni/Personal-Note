@@ -2,10 +2,10 @@ import React from "react";
 import NoteContent from "./NoteContent";
 import NoteArchiveButton from "./NoteArchiveButton";
 
-function NoteItem({ title, createdAt, body, id, archived, onDelete, onArchive }) {
+function NoteItem({ title, body, createdAt, id, archived, onDelete, onArchive }) {
   return (
     <div className="note-item">
-      <NoteContent title={title} createdAt={createdAt} body={body} />
+      <NoteContent title={title} body={body} date={createdAt} />
       <NoteArchiveButton id={id} archived={archived} onDelete={onDelete} onArchive={onArchive} />
     </div>
   );
